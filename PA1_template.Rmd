@@ -2,7 +2,9 @@
 title: "Reproducible Research COURSE PROJECT 1"
 author: "Ashly Yashchin"
 date: "5/24/2017"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ##1. First, let's download and read the raw data.
