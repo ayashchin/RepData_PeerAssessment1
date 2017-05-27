@@ -3,7 +3,8 @@ title: "Reproducible Research COURSE PROJECT 1"
 author: "Ashly Yashchin"
 date: "5/24/2017"
 output:
-  html_document: default
+  html_document: 
+    self_contained: no
   pdf_document: default
 ---
 
