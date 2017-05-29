@@ -3,8 +3,10 @@ title: "Reproducible Research COURSE PROJECT 1"
 author: "Ashly Yashchin"
 date: "5/24/2017"
 output:
-  md_document:
-  variant: markdown_github
+  html_document: 
+    self_contained: no
+  md_document: 
+   variant: markdown_github
 ---
                 
 ##1. First, let's download and read the raw data.
@@ -17,7 +19,7 @@ stepsdata <- unzip("./data/ActivityMonitoring_Steps.zip")
 stepsdata <- read.csv(stepsdata,header=TRUE,sep=",")
 ```
 
-##2. Now let's remove missing values and calculate the total number of steps per day for use in our histogram.
+##2. Now we need to remove missing values and calculate the total number of steps per day for use in our histogram.
 
 ```{r, echo=TRUE}
 library(dplyr)
@@ -40,7 +42,7 @@ mean(stepsdata_byday$Daily_Steps)
 median(stepsdata_byday$Daily_Steps)
 ```
 
-RESULT: The mean steps taken each day are 10766.
+RESULT: The mean steps taken each day are 10766.19.
 The median steps taken each day are 10765.
 Pretty close! 
 

@@ -141,7 +141,7 @@ stepsdata_byday &lt;- rename(stepsdata_byday, Date = date, Daily_Steps = `sum(st
 <div id="with-the-data-cleaned-and-processed-we-are-ready-to-plot." class="section level3">
 <h3>With the data cleaned and processed we are ready to plot.</h3>
 <pre class="r"><code>hist(stepsdata_byday$Daily_Steps,xlab=&quot;Steps per Day&quot;,main=&quot;Histogram 1: Total Steps/Day&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="finally-lets-calculate-the-mean-and-median-steps-per-day." class="section level3">
 <h3>Finally, let’s calculate the mean and median steps per day.</h3>
@@ -149,7 +149,7 @@ stepsdata_byday &lt;- rename(stepsdata_byday, Date = date, Daily_Steps = `sum(st
 <pre><code>## [1] 10766.19</code></pre>
 <pre class="r"><code>median(stepsdata_byday$Daily_Steps)</code></pre>
 <pre><code>## [1] 10765</code></pre>
-<p>RESULT: The mean steps taken each day are 1.076618910^{4}. The median steps taken each day are <code>median(stepsdata_byday$Daily_Steps)</code>. Pretty close!</p>
+<p>RESULT: The mean steps taken each day are 10766.19. The median steps taken each day are 10765. Pretty close!</p>
 </div>
 </div>
 <div id="now-we-need-to-find-the-average-daily-activity-pattern." class="section level2">
@@ -163,7 +163,7 @@ stepsinterval &lt;- summarise(stepsinterval,mean(steps))</code></pre>
 <div id="now-we-are-ready-to-plot." class="section level3">
 <h3>Now we are ready to plot.</h3>
 <pre class="r"><code>plot(stepsinterval, xlab=&quot;Interval&quot;,ylab=&quot;Average Steps Taken&quot;,type=&quot;l&quot;,main=&quot;Average Steps by Interval&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="finally-we-can-calculate-the-max." class="section level3">
 <h3>Finally, we can calculate the max.</h3>
@@ -204,7 +204,7 @@ datacopy$steps &lt;- na.replace(datacopy$steps,fill=datacopy$Mean_Steps)</code><
 <pre class="r"><code>datacopy &lt;- group_by(datacopy, date)
 stepsbyday &lt;- summarize(datacopy,sum(steps))
 hist(stepsbyday$`sum(steps)`,xlab=&quot;Steps per Day&quot;,main=&quot;Histogram 2: Total Steps per Day (Includes Imputed Values)&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 <div id="and-calculate-our-mean-and-median-number-of-steps-per-day." class="section level3">
 <h3>And calculate our mean and median number of steps per day.</h3>
@@ -238,7 +238,7 @@ averagesteps &lt;- summarize(averagesteps,mean(steps))</code></pre>
 <h3>Now we’re ready to plot.</h3>
 <pre class="r"><code>library(lattice)
 xyplot(`mean(steps)`~interval|DayClass,data=averagesteps,layout=c(1,2),type=&quot;l&quot;,main=&quot;Average Steps per Interval by Time of Week&quot;,ylab=&quot;Average Steps&quot;,xlab=&quot;Interval&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>RESULT: The subject appears to be more active on weekends. We could hypothesize that this is when they are away from their weekly desk job. The subject also appears to stay up a little bit later on weekends, as shown by the spike in activity at the tail of the weekend data.</p>
 </div>
 </div>

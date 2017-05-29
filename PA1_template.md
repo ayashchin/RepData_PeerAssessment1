@@ -42,7 +42,7 @@ median(stepsdata_byday$Daily_Steps)
 
     ## [1] 10765
 
-RESULT: The mean steps taken each day are 1.076618910^{4}. The median steps taken each day are `median(stepsdata_byday$Daily_Steps)`. Pretty close!
+RESULT: The mean steps taken each day are 10766.19. The median steps taken each day are 10765. Pretty close!
 
 3. Now we need to find the average daily activity pattern.
 ----------------------------------------------------------
