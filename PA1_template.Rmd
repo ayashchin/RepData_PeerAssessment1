@@ -3,11 +3,10 @@ title: "Reproducible Research COURSE PROJECT 1"
 author: "Ashly Yashchin"
 date: "5/24/2017"
 output:
-  html_document: 
-    self_contained: no
-  pdf_document: default
+  md_document:
+  variant: markdown_github
 ---
-
+                
 ##1. First, let's download and read the raw data.
 
 ```{r, echo = TRUE}
